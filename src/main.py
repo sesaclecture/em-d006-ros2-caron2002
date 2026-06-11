@@ -6,6 +6,7 @@
 #
 # 강의 시간에 사용한 ros2 pkg create 명령어를 활용하세요.
 def make_ros2_pkg_create_command(package_name):
+    return f"ros2 pkg create {package_name} --build-type ament_python"
     raise NotImplementedError
 
 
@@ -17,6 +18,7 @@ def make_ros2_pkg_create_command(package_name):
 #
 # 강의 시간에 사용한 ros2 topic 명령어를 활용하세요.
 def make_ros2_topic_echo_command(topic_name):
+    return f"ros2 topic echo {topic_name}"
     raise NotImplementedError
 
 
@@ -29,6 +31,7 @@ def make_ros2_topic_echo_command(topic_name):
 #
 # 강의 시간에 사용한 ros2 run 명령어를 활용하세요.
 def make_ros2_run_command(package_name, node_name):
+    return f"ros2 run {package_name} {node_name}"
     raise NotImplementedError
 
 
@@ -41,6 +44,7 @@ def make_ros2_run_command(package_name, node_name):
 #
 # 강의 시간에 사용한 ros2 launch 명령어를 활용하세요.
 def make_ros2_launch_command(package_name, launch_file):
+    return f"ros2 launch {package_name} {launch_file}"
     raise NotImplementedError
 
 
@@ -64,4 +68,5 @@ def make_ros2_docker_run_command(
     container_name,
     image_name,
 ):
+    return f"docker run -dit --rm --name {container_name} --network host -e DISPLAY $DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:rw {image_name} /bin/bash"
     raise NotImplementedError
